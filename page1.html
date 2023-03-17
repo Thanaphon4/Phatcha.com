@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <link rel="stylesheet" href="forPage1.css">
+</head>
+<body>
+    <audio id="myAudio" autoplay loop src="hbdpia.mp3"></audio>
+
+    <div class="card">
+        <div class="heart"></div>
+
+        <div class="outside">
+            <div class="title">HAPPY BIRTHDAY
+                <div class="imgout2"><img src="1.png" alt=""></div>
+                <div class="imgout"><img src="https://static.vecteezy.com/system/resources/previews/001/201/706/original/cake-png.png" alt=""></div>
+                <div class="ball1"></div>
+                <div class="ball2"></div>
+            </div>
+        </div>
+        <div class="inside">
+            <h2>Happy Birthday</h2>
+            <p class="sammy">To Sammy.</p>
+            <p>May all your dreams come true!<br>
+                ขอให้ความฝันทุกอย่างของคุณเป็นจริง!<br><br>
+                Wishing you has happiness in life.<br>
+                ขอให้มีความสุขในชีวิตนะ
+            </p>
+            <div class="sun"><img src="sunpng.png" alt=""></div>
+        </div>
+    </div>
+    <canvas id="my-canvas"></canvas>
+    <script src="index.min.js"></script>
+    <script>
+        document.getElementById("myAudio").volume = 0.2;
+        var confettiSettings = { target: 'my-canvas' };
+        var confetti = new ConfettiGenerator(confettiSettings);
+        confetti.render();
+    </script>
+</body>
+</html>

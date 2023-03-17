@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page_login</title>
+    <link rel="stylesheet" href="forLog.css">
+    <link rel="stylesheet" href="alert.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+    <span id="pid">Reolsr$We{er</span>
+    <div class="con">
+        <div class="box" id="box4">
+
+            <div class="left">
+                <h1>Sign in</h1>
+                <span class="yel">Username</span>
+                <input id="user" type="text" placeholder="username">
+                <span class="yel">Password</span>
+                <input id="pass" type="password" placeholder="password">
+
+                <button class="log" onclick="login()">Login</button>
+            </div>
+
+            <div class="right">
+                <h1 class="hr">Password search</h1>
+                <div class="finduser">
+                    <p class="puser">print(''.join(list(map(lambda v: chr(ord(v)-4),"Lett}$Fmvxlhe}"))))</p>
+                    <a href="https://www.online-python.com/"><button class="go">Go!</button></a>
+                </div>
+                <div class="findpass">
+                    <p>The password is your birthday</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="ball1"></div>
+        <div class="ball2"></div>
+    </div>
+
+    <div class="alertw hide">
+		<span class="fas fa-exclamation-circle"></span>
+		<span class="ms3">Error! : Please check the correctness.</span>
+		<div class="btns3"><span class="fas fa-times"></span></div>
+	</div>
+
+	<div class="alerts hide">
+		<span class="fas fa-check-circle"></span>
+		<span class="ms">Success! : Hello Sammy.</span>
+		<div class="btns"><span class="fas fa-times"></span></div>
+	</div>
+
+	<div class="alerte hide">
+		<span id="x" class="fas fa-plus-circle"></span>
+		<span class="ms2">Sorry : Please try again.</span>
+		<div class="btns2"><span class="fas fa-times"></span></div>
+	</div>
+
+
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+
+    <script>
+        VanillaTilt.init(document.querySelector(".box"), {
+		max: 5,
+		speed: 400,
+        glare: true,
+        "max-glare": 0.1,
+	});
+    </script>
+
+    <script>
+        function login() {
+            const user = document.getElementById("user").value;
+            const pass = document.getElementById("pass").value;
+
+
+            if (user == "Happy Birthday" && pass == "270549") {
+	
+				$('.alerts').removeClass('hide');
+				$('.alerts').addClass('show');
+				$('.alerts').addClass('showall');
+
+				setTimeout(function(){
+					window.location.assign('page1.html');
+                    $('.alerts').addClass('hide');
+					$('.alerts').removeClass('show');
+                    user = '';
+                    pass = '';
+				},2000);
+
+                $('.btns').click(function(){
+				$('.alerts').addClass('hide');
+				$('.alerts').removeClass('show');
+				});
+            }
+            else if (user == "" || pass == "") {
+
+				$('.alertw').removeClass('hide');
+				$('.alertw').addClass('show');
+				$('.alertw').addClass('showall');
+
+				setTimeout(function(){
+					$('.alertw').addClass('hide');
+					$('.alertw').removeClass('show');
+				},5000);
+
+				$('.btns3').click(function(){
+				$('.alertw').addClass('hide');
+				$('.alertw').removeClass('show');
+				});
+            }
+            else {
+				$('.alerte').removeClass('hide');
+				$('.alerte').addClass('show');
+				$('.alerte').addClass('showall');
+
+				setTimeout(function(){
+					$('.alerte').addClass('hide');
+					$('.alerte').removeClass('show');
+				},5000);
+
+				$('.btns2').click(function(){
+				$('.alerte').addClass('hide');
+				$('.alerte').removeClass('show');
+				});
+                return;
+            }
+
+
+        }
+    </script>
+
+</body>
+</html>
