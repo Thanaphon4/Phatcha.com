@@ -13,6 +13,7 @@ img {
 
 body {
     background-color: #180238;
+    overflow: hidden;
 }
 
 .card {
