@@ -5,10 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Birthday</title>
+    <link rel = "icon" href ="sunpng.png" type = "image/x-icon">
     <link rel="stylesheet" href="forPage1.css">
 </head>
 <body>
     <audio id="myAudio" autoplay loop src="hbdpia.mp3"></audio>
+    
+    <button id="bll" class="bll" onclick="removeElement()"><div class="cl">Click</div></button>
 
     <div class="card">
         <div class="heart"></div>
@@ -23,7 +26,7 @@
         </div>
         <div class="inside">
             <h2>Happy Birthday</h2>
-            <p class="sammy">To Sammy.</p>
+            <p class="sammy">To Phatcha.</p>
             <p>May all your dreams come true!<br>
                 ขอให้ความฝันทุกอย่างของคุณเป็นจริง!<br><br>
                 Wishing you has happiness in life.<br>
@@ -39,6 +42,20 @@
         var confettiSettings = { target: 'my-canvas' };
         var confetti = new ConfettiGenerator(confettiSettings);
         confetti.render();
+    </script>
+    
+    <script>
+        function removeElement() {
+            document.getElementById("bll").style.display = "none";
+        }
+    </script>
+    
+     <script>
+        function removeElement() {
+            setTimeout(function(){
+                document.getElementById("bll").style.display = "none";
+            },2000);
+        }
     </script>
 </body>
 </html>
