@@ -289,3 +289,28 @@ body {
     background-color: rgb(197, 115, 80);
     transition: 0.5s;
 }
+
+@media only screen and (max-width: 785px) {
+    body {
+        overflow: scroll;
+    }
+    
+    .alerts {
+        width: 350px;
+        z-index: 5;
+    }
+
+    .alerte {
+        width: 350px;
+        z-index: 5;
+    }
+
+    .alertw {
+        width: 350px;
+        z-index: 5;
+    }
+
+    .ms, .ms2, .ms3 {
+        font-size: 16px;
+    }
+}
