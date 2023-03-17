@@ -210,3 +210,40 @@ p {
     cursor: pointer;
 }
 
+
+@media only screen and (max-width: 785px) {
+
+    body {
+        height: 100vh;
+        overflow: scroll;
+    }
+    
+    .con {
+        min-height: calc(100%);
+    }
+
+    input {
+        width: calc(100%);
+    }
+
+    .box {
+        grid-template-columns: 1fr;
+        padding: 30px;
+        width: calc(100% - 80px);
+        height: calc(100% - 80px);
+        position: relative;
+        margin: 100px 0;
+    }
+
+    .finduser {
+        padding: 15px;
+    }
+
+    .findpass {
+        padding: 15px;
+    }
+
+    .go {
+        margin-bottom: 20px;
+    }
+}
